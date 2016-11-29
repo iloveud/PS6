@@ -120,6 +120,8 @@ public class PersonOverviewController {
         	
         	//TODO: Delete the person, call the deletePerson(perID) method
         	//		in the DAL
+        	
+        	PersonDAL.deletePerson(perID);
         	 
             personTable.getItems().remove(selectedIndex);
             
@@ -158,6 +160,10 @@ public class PersonOverviewController {
         	
         	//TODO: Delete the person, call the addPerson(perID) method
         	//		in the DAL
+        	
+        	PersonDAL.addPerson(per);
+        	
+        	
         	        	
             mainApp.getPersonData().add(tempPerson);
         }
@@ -189,6 +195,9 @@ public class PersonOverviewController {
             	
             	//TODO: Delete the person, call the updatePerson(perID) method
             	//		in the DAL
+          
+            	PersonDAL.updatePerson(updatePer);
+            	
             	
             	
                 showPersonDetails(selectedPerson);
